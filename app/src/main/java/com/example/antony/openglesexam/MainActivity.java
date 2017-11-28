@@ -39,10 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
     class MyGLRenderer implements GLSurfaceView.Renderer {
 
+        private Triangle triangle;
+        private Square square;
+
         @Override
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
             // Set the background frame color
             GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+            triangle = new Triangle();
+            square = new Square();
         }
 
         @Override
